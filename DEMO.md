@@ -5,14 +5,16 @@ Va entre el minuto 52 y el 59, justo después de la lámina 20.
 
 ---
 
-## Lo que falta
+## Opcional
 
-- [ ] **Poner el enlace real de la comunidad de Team1** en `src/features/pass/links.ts`. Hoy tiene
-      un provisorio, y ese enlace aparece en la página de acceso que mostrás en el paso 4.
-- [ ] **Decidir si querés una segunda wallet de respaldo propia.** Ya hay una que funciona
-      (`0x78Bef96aC46b44073caAc33834df924DEef62f43`, con el pass #1). Si preferís una tuya en Core: la creás, le pedís AVAX al
-      faucet, y corrés
-      `PRIVATE_KEY=<la de respaldo> CONTRATO=0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2 bash scripts/mint-respaldo.sh`
+La wallet de respaldo `0x78Bef96aC46b44073caAc33834df924DEef62f43` ya tiene el pass #1 acuñado y
+sirve tal cual para el plan B. Si preferís que sea una cuenta tuya de Core: la creás, le pedís
+AVAX en el faucet, y corrés
+
+```
+PRIVATE_KEY=<la de respaldo> CONTRATO=0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2 \
+  bash scripts/mint-respaldo.sh
+```
 
 ## Antes del día
 
