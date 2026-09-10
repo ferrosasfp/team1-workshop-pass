@@ -31,3 +31,6 @@ CLAUDE.md
 # sistema
 .DS_Store
 coverage/
+
+# capturas de la prueba local, no se versionan
+capturas/
