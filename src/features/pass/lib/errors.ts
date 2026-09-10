@@ -17,13 +17,13 @@ export interface FriendlyError {
 
 const REJECTED: FriendlyError = {
   title: 'Cancelaste la firma',
-  hint: 'No se envió nada a la red y no gastaste nada. Podés volver a intentarlo cuando quieras.',
+  hint: 'No se envió nada a la red y no gastaste nada. Puedes volver a intentarlo cuando quieras.',
   retryable: true,
 }
 
 const ALREADY_MINTED: FriendlyError = {
   title: 'Esta dirección ya tiene su pass',
-  hint: 'El contrato permite uno por dirección. Andá al paso 3 y verificalo.',
+  hint: 'El contrato permite uno por dirección. Ve al paso 3 y verifícalo.',
   retryable: false,
 }
 
@@ -35,25 +35,25 @@ const SOULBOUND: FriendlyError = {
 
 const NO_FUNDS: FriendlyError = {
   title: 'Te falta AVAX de prueba',
-  hint: 'Pedí AVAX gratis en el faucet de Core y volvé a intentarlo. En Fuji no vale dinero real.',
+  hint: 'Pide AVAX gratis en el faucet de Core y vuelve a intentarlo. En Fuji no vale dinero real.',
   retryable: true,
 }
 
 const WRONG_NETWORK: FriendlyError = {
   title: 'Tu wallet no está en Avalanche Fuji',
-  hint: 'Cambiá de red desde el aviso de arriba y volvé a intentarlo.',
+  hint: 'Cambia de red desde el aviso de arriba y vuelve a intentarlo.',
   retryable: true,
 }
 
 const NETWORK: FriendlyError = {
   title: 'No pudimos hablar con la red',
-  hint: 'Puede ser la conexión o el nodo público de Fuji. Esperá unos segundos y reintentá.',
+  hint: 'Puede ser la conexión o el nodo público de Fuji. Espera unos segundos y reintenta.',
   retryable: true,
 }
 
 const UNKNOWN: FriendlyError = {
   title: 'Algo salió mal',
-  hint: 'La transacción no se completó. Probá de nuevo; si sigue fallando, recargá la página.',
+  hint: 'La transacción no se completó. Prueba de nuevo; si sigue fallando, recarga la página.',
   retryable: true,
 }
 

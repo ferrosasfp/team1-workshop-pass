@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Un NFT en Avalanche Fuji que funciona como credencial de acceso. Demo del workshop "NFT más allá del arte" de Team1 LatAm.',
   openGraph: {
     title: 'Team1 Workshop Pass',
-    description: 'Acuñá tu credencial de acceso en Avalanche Fuji. Sin dinero real.',
+    description: 'Acuña tu credencial de acceso en Avalanche Fuji. Sin dinero real.',
     type: 'website',
   },
 }

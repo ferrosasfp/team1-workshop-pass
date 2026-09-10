@@ -14,7 +14,7 @@ export function StepVerify() {
   const { data, isFetching, isError, refetch } = usePassStatus(address)
 
   if (!address) {
-    return <p className="text-lg text-muted">Conectá tu wallet en el paso 1 para verificarla.</p>
+    return <p className="text-lg text-muted">Conecta tu wallet en el paso 1 para verificarla.</p>
   }
 
   return (
@@ -28,7 +28,7 @@ export function StepVerify() {
         <div className="rounded-xl border border-avax/50 bg-avax-soft p-4">
           <p className="font-semibold text-avax">No pudimos preguntarle a la red</p>
           <p className="mt-1 text-sm text-muted">
-            Puede ser la conexión o el nodo público de Fuji. Reintentá en unos segundos.
+            Puede ser la conexión o el nodo público de Fuji. Reintenta en unos segundos.
           </p>
           <button type="button" onClick={() => refetch()} className="btn-ghost mt-3">
             Volver a preguntar

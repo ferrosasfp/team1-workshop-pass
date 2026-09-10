@@ -10,7 +10,7 @@ import { PassResult } from './PassResult'
  * RF-13: verificar cualquier dirección pegada a mano, sin conectar nada.
  *
  * Vive fuera de los cuatro pasos y siempre está a la vista, porque además de
- * ser una demostración es el plan B: si la wallet del orador falla en vivo, acá
+ * ser una demostración es el plan B: si la wallet del orador falla en vivo, aquí
  * se pega la dirección de respaldo y la demo sigue.
  */
 export function FreeVerify() {
@@ -62,7 +62,7 @@ export function FreeVerify() {
 
       {isError && target && (
         <p className="mt-2 text-sm text-avax corto:mt-1 corto:text-xs">
-          No pudimos preguntarle a la red. Reintentá en unos segundos.
+          No pudimos preguntarle a la red. Reintenta en unos segundos.
         </p>
       )}
 

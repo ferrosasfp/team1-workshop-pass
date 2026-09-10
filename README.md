@@ -97,7 +97,7 @@ Hace falta Node 20 o más, y [Foundry](https://getfoundry.sh) para los contratos
 
 ```bash
 npm install
-cp .env.example .env.local     # y completá NEXT_PUBLIC_PASS_ADDRESS
+cp .env.example .env.local     # y completa NEXT_PUBLIC_PASS_ADDRESS
 npm run dev                    # http://localhost:3000
 ```
 
@@ -183,7 +183,7 @@ npm run qa:full   # lo anterior, más los tests de Foundry
 
 - TypeScript en `strict`, con `noUncheckedIndexedAccess` y `exactOptionalPropertyTypes`.
 - ESLint con `--max-warnings 0`.
-- 34 tests de vitest sobre la lógica de verificación, el avance de los pasos y el formateo de
+- 36 tests de vitest sobre la lógica de verificación, el avance de los pasos y el formateo de
   errores. 20 tests de Foundry sobre el contrato.
 - `npm audit`: sin vulnerabilidades.
 

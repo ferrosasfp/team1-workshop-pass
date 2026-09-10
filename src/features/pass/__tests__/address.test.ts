@@ -22,7 +22,7 @@ describe('parseAddress', () => {
 
   it('pide una dirección cuando el campo está vacío', () => {
     const result = parseAddress('   ')
-    expect(result).toEqual({ ok: false, error: 'Pegá una dirección para verificarla.' })
+    expect(result).toEqual({ ok: false, error: 'Pega una dirección para verificarla.' })
   })
 
   it.each([

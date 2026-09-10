@@ -35,7 +35,7 @@ export function AccesoGate() {
   if (!isConnected || !address) {
     return (
       <Denegado
-        titulo="Todavía no sabemos quién sos"
+        titulo="Todavía no sabemos quién eres"
         detalle="Esta página le pregunta a la red si tu dirección tiene el pass, y para eso necesita una dirección conectada."
       />
     )
@@ -85,7 +85,7 @@ export function AccesoGate() {
         Estás <span className="text-avax">adentro</span>
       </h1>
       <p className="mt-3 max-w-2xl text-lg text-muted sm:text-xl">
-        Nadie te dio de alta en ningún sistema. Tenés el token, y con eso alcanzó.
+        Nadie te dio de alta en ningún sistema. Tienes el token, y con eso bastó.
       </p>
 
       <ul className="mt-6 grid gap-3 sm:grid-cols-3">

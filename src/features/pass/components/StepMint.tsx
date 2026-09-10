@@ -33,9 +33,9 @@ export function StepMint({ onMinted }: Props) {
   if (status?.hasPass && phase !== 'confirmed') {
     return (
       <div className="flex flex-col items-start gap-4">
-        <p className="text-2xl font-semibold text-ok sm:text-3xl">Ya tenés tu pass</p>
+        <p className="text-2xl font-semibold text-ok sm:text-3xl">Ya tienes tu pass</p>
         <p className="max-w-xl text-lg text-muted">
-          El contrato permite uno por dirección, así que no hay nada más que hacer acá. Pasá al
+          El contrato permite uno por dirección, así que no hay nada más que hacer aquí. Pasa al
           paso 3 y preguntémosle a la red.
         </p>
       </div>
@@ -45,7 +45,7 @@ export function StepMint({ onMinted }: Props) {
   if (wrongNetwork) {
     return (
       <p className="text-lg text-muted">
-        Volvé al paso 1 y cambiá a {passChain.name} para poder acuñar.
+        Vuelve al paso 1 y cambia a {passChain.name} para poder acuñar.
       </p>
     )
   }
@@ -86,7 +86,7 @@ export function StepMint({ onMinted }: Props) {
             className="btn-primary self-start text-lg"
           >
             {phase === 'signing'
-              ? 'Confirmá en tu wallet…'
+              ? 'Confirma en tu wallet…'
               : phase === 'confirming'
                 ? 'Escribiendo en la red…'
                 : 'Acuñar mi pass'}

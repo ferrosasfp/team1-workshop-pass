@@ -23,7 +23,7 @@ export function StepConnect() {
       <div className="flex flex-col items-start gap-6 corto:gap-4">
         <p className="max-w-xl text-lg text-muted corto:text-base sm:text-xl">
           No hay registro ni contraseña. Tu wallet <strong className="text-paper">es</strong> tu
-          identidad, y con eso alcanza para entrar.
+          identidad, y con eso basta para entrar.
         </p>
 
         {/* En proyector el boton y la ayuda comparten fila: el alto escasea. */}
@@ -33,7 +33,7 @@ export function StepConnect() {
           </button>
 
           <p className="text-sm text-muted">
-            ¿No tenés ninguna?{' '}
+            ¿No tienes ninguna?{' '}
             <a
               href="https://core.app/download"
               target="_blank"
@@ -66,7 +66,7 @@ export function StepConnect() {
         <div className="rounded-xl border border-warn/40 bg-warn/10 p-4">
           <p className="font-semibold text-warn">Tu wallet no está en {passChain.name}</p>
           <p className="mt-1 text-sm text-muted">
-            El pass vive en esa red. Cambiá desde acá y seguimos.
+            El pass vive en esa red. Cambia desde aquí y seguimos.
           </p>
           <button
             type="button"
@@ -85,13 +85,13 @@ export function StepConnect() {
               ? `${Number(formatUnits(balance.value, balance.decimals)).toFixed(4)} ${balance.symbol}`
               : '…'}
           </strong>
-          . Acá los tokens no valen dinero real.
+          . Aquí los tokens no valen dinero real.
         </p>
       )}
 
       {noFunds && !wrongNetwork && (
         <div className="rounded-xl border border-warn/40 bg-warn/10 p-4">
-          <p className="font-semibold text-warn">No tenés AVAX de prueba</p>
+          <p className="font-semibold text-warn">No tienes AVAX de prueba</p>
           <p className="mt-1 text-sm text-muted">
             Hace falta un poco para pagar el gas. El faucet te da AVAX de Fuji gratis.
           </p>

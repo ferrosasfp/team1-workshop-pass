@@ -33,7 +33,7 @@ export function DemoFlow() {
   const [elegido, setElegido] = useState<{ paso: StepNumber; desde: StepNumber } | null>(null)
   const step = pasoActivo(sugerido, elegido)
 
-  // Sin useCallback: el compilador de React memoiza esto solo, y aca la
+  // Sin useCallback: el compilador de React memoiza esto solo, y aquí la
   // dependencia real es `sugerido`, que cambia cuando cambia la cadena.
   const onSelect = (paso: StepNumber) => setElegido({ paso, desde: sugerido })
 
@@ -50,9 +50,9 @@ export function DemoFlow() {
           <h1 className="text-xl font-semibold text-avax">Falta configurar el contrato</h1>
           <p className="mt-3 text-sm text-muted">
             La variable <code className="font-mono">NEXT_PUBLIC_PASS_ADDRESS</code> no tiene una
-            dirección válida. Copiá <code className="font-mono">.env.example</code> a{' '}
-            <code className="font-mono">.env.local</code>, completala con la dirección del contrato
-            en {passChain.name} y volvé a levantar la aplicación.
+            dirección válida. Copia <code className="font-mono">.env.example</code> a{' '}
+            <code className="font-mono">.env.local</code>, complétala con la dirección del contrato
+            en {passChain.name} y vuelve a levantar la aplicación.
           </p>
         </div>
       </main>
@@ -100,7 +100,7 @@ export function DemoFlow() {
 
       <footer className="shrink-0">
         <p className="text-xs text-muted">
-          Fuji es la red de pruebas. Sin dinero real, y lo podés repetir hoy.
+          Fuji es la red de pruebas. Sin dinero real, y lo puedes repetir hoy.
         </p>
       </footer>
     </main>

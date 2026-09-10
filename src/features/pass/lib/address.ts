@@ -21,7 +21,7 @@ export type ParsedAddress =
  */
 export function parseAddress(input: string): ParsedAddress {
   if (input.trim().length === 0) {
-    return { ok: false, error: 'Pegá una dirección para verificarla.' }
+    return { ok: false, error: 'Pega una dirección para verificarla.' }
   }
 
   const result = addressSchema.safeParse(input)

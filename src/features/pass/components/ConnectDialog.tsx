@@ -10,7 +10,7 @@ interface Props {
 
 /**
  * RF-02: lista las wallets que el navegador anuncia por EIP-6963, con su
- * nombre y su ícono propios. Core Wallet aparece acá como "Core", no como
+ * nombre y su ícono propios. Core Wallet aparece aquí como "Core", no como
  * un genérico "Injected".
  */
 export function ConnectDialog({ onClose }: Props) {
@@ -32,7 +32,7 @@ export function ConnectDialog({ onClose }: Props) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Elegí tu wallet"
+      aria-label="Elige tu wallet"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
       onClick={(event) => {
         if (!panel.current?.contains(event.target as Node)) onClose()
@@ -40,7 +40,7 @@ export function ConnectDialog({ onClose }: Props) {
     >
       <div ref={panel} className="card w-full max-w-sm p-6">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Elegí tu wallet</h2>
+          <h2 className="text-lg font-semibold">Elige tu wallet</h2>
           <button
             type="button"
             onClick={onClose}
@@ -77,7 +77,7 @@ export function ConnectDialog({ onClose }: Props) {
 
           {connectors.length === 0 && (
             <p className="py-6 text-center text-sm text-muted">
-              No detectamos ninguna wallet en este navegador. Instalá Core Wallet y volvé a
+              No detectamos ninguna wallet en este navegador. Instala Core Wallet y vuelve a
               intentarlo.
             </p>
           )}

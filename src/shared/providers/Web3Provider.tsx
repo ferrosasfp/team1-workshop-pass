@@ -41,7 +41,7 @@ class Web3ErrorBoundary extends Component<Props, State> {
           <div className="card max-w-md p-8 text-center">
             <h1 className="text-xl font-semibold text-avax">No pudimos iniciar la wallet</h1>
             <p className="mt-3 text-sm text-muted">
-              Algo falló al conectar con el navegador. Probá de nuevo, o recargá la página.
+              Algo falló al conectar con el navegador. Prueba de nuevo, o recarga la página.
             </p>
             <button onClick={this.handleRetry} className="btn-primary mt-6">
               Reintentar
