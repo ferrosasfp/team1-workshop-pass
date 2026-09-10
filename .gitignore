@@ -1,0 +1,33 @@
+# dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# next
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# entorno: nunca se versiona nada con claves
+.env
+.env.*
+!.env.example
+.deployer-key.txt
+
+# foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+.deploy-fuji.log
+
+# vercel
+.vercel
+
+# generado por next dev
+AGENTS.md
+CLAUDE.md
+
+# sistema
+.DS_Store
+coverage/

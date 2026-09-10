@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink text-paper antialiased;
+  }
+
+  /* La demo se proyecta a 150%: nunca debe aparecer scroll horizontal. */
+  html,
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-avax px-6 py-3
+           text-base font-semibold text-white transition-colors
+           hover:bg-avax-dark focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-avax
+           disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line
+           bg-transparent px-4 py-2 text-sm font-medium text-paper transition-colors
+           hover:border-avax hover:text-avax focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-avax
+           disabled:cursor-not-allowed disabled:opacity-40;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-line px-3 py-1
+           font-mono text-xs text-muted;
+  }
+}
