@@ -35,7 +35,7 @@ export function FreeVerify() {
   }
 
   return (
-    <section aria-label="Verificar cualquier dirección" className="card p-3 sm:p-4">
+    <section aria-label="Verificar cualquier dirección" className="card p-3 corto:p-2.5 sm:p-4">
       <form onSubmit={onSubmit} className="flex flex-col gap-2 sm:flex-row sm:items-center">
         <label
           htmlFor="direccion"
@@ -58,10 +58,10 @@ export function FreeVerify() {
         </button>
       </form>
 
-      {inputError && <p className="mt-2 text-sm text-avax">{inputError}</p>}
+      {inputError && <p className="mt-2 text-sm text-avax corto:mt-1 corto:text-xs">{inputError}</p>}
 
       {isError && target && (
-        <p className="mt-2 text-sm text-avax">
+        <p className="mt-2 text-sm text-avax corto:mt-1 corto:text-xs">
           No pudimos preguntarle a la red. Reintentá en unos segundos.
         </p>
       )}

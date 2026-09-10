@@ -5,32 +5,23 @@ Va entre el minuto 52 y el 59, justo después de la lámina 20.
 
 ---
 
-## Lo que falta para que la demo esté lista
+## Lo que falta
 
-- [ ] **Poner AVAX de prueba en la wallet desplegadora.** Está en `.deployer-key.txt`, que no se
-      versiona. Alcanza con 0.2 AVAX de Fuji: se los mandás desde tu wallet, o pegás su dirección
-      en [el faucet de Core](https://core.app/tools/testnet-faucet).
-- [ ] **Desplegar el contrato:** `bash scripts/deploy-fuji.sh`. Despliega, verifica en el
-      explorador y te imprime la dirección.
-- [ ] **Publicar esa dirección:** `vercel env add NEXT_PUBLIC_PASS_ADDRESS production` y después
-      `vercel deploy --prod --yes`. Anotala también en el README.
-- [ ] **Poner el enlace real de la comunidad de Team1** en `src/features/pass/links.ts`, que hoy
-      tiene un provisorio.
+- [ ] **Poner el enlace real de la comunidad de Team1** en `src/features/pass/links.ts`. Hoy tiene
+      un provisorio, y ese enlace aparece en la página de acceso que mostrás en el paso 4.
+- [ ] **Decidir si querés una segunda wallet de respaldo propia.** Ya hay una que funciona
+      (`0x78Bef96aC46b44073caAc33834df924DEef62f43`, con el pass #1). Si preferís una tuya en Core: la creás, le pedís AVAX al
+      faucet, y corrés
+      `PRIVATE_KEY=<la de respaldo> CONTRATO=0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2 bash scripts/mint-respaldo.sh`
 
 ## Antes del día
 
-- [ ] **Crear la wallet de respaldo.** Una segunda cuenta en Core, distinta de la que vas a usar
-      en vivo. En Core: menú de cuentas, "Crear cuenta". Anotá su dirección.
-- [ ] **Pedirle AVAX de prueba al faucet** para esa segunda cuenta, en
-      [core.app/tools/testnet-faucet](https://core.app/tools/testnet-faucet).
-- [ ] **Acuñarle el pass.** Entrás a la aplicación con esa cuenta y hacés el paso 2, o corrés:
-      `PRIVATE_KEY=<la de respaldo> CONTRATO=<la del contrato> bash scripts/mint-respaldo.sh`
-- [ ] **Anotar esa dirección en el README** y tenerla también en un archivo de texto que puedas
-      copiar de un solo golpe el día de la charla.
 - [ ] **Confirmar que tu wallet en vivo NO tiene el pass.** Pegá tu dirección en el campo de
       verificación libre: tiene que decir "No tiene el pass". Si dice que sí, la demo pierde el
       paso 2, porque el contrato permite uno por dirección.
 - [ ] **Confirmar que tu wallet en vivo sí tiene AVAX de prueba** para pagar el gas.
+- [ ] **Tener a mano la dirección de respaldo**, en un archivo de texto que puedas copiar de un
+      solo golpe: `0x78Bef96aC46b44073caAc33834df924DEef62f43`
 
 ## Diez minutos antes de compartir pantalla
 
@@ -168,8 +159,8 @@ aplicación, era de la red.
 | | |
 |---|---|
 | Aplicación | https://team1-workshop-pass.vercel.app |
-| Contrato en Fuji | _pendiente: se completa al desplegar_ |
+| Contrato en Fuji | `0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2` |
 | Wallet en vivo | la tuya, la que abrís en Core el día del workshop |
-| Wallet de respaldo | _pendiente: la creás vos en Core_ |
+| Wallet de respaldo | `0x78Bef96aC46b44073caAc33834df924DEef62f43` (pass #1) |
 | Explorador | subnets.avax.network/c-chain-testnet |
 | Faucet | core.app/tools/testnet-faucet |

@@ -10,8 +10,8 @@ usable desde el teléfono.
 |---|---|
 | Aplicación | https://team1-workshop-pass.vercel.app |
 | Repositorio | https://github.com/ferrosasfp/team1-workshop-pass |
-| Contrato en Fuji | _pendiente: se completa al desplegar_ |
-| Wallet de respaldo (plan B) | _pendiente: la crea Fernando en Core_ |
+| Contrato en Fuji | [`0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2`](https://subnets.avax.network/c-chain-testnet/address/0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2) (verificado) |
+| Wallet de respaldo (plan B) | `0x78Bef96aC46b44073caAc33834df924DEef62f43`, con el pass #1 acuñado |
 
 ---
 
