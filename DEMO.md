@@ -5,6 +5,18 @@ Va entre el minuto 52 y el 59, justo después de la lámina 20.
 
 ---
 
+## Lo que falta para que la demo esté lista
+
+- [ ] **Poner AVAX de prueba en la wallet desplegadora.** Está en `.deployer-key.txt`, que no se
+      versiona. Alcanza con 0.2 AVAX de Fuji: se los mandás desde tu wallet, o pegás su dirección
+      en [el faucet de Core](https://core.app/tools/testnet-faucet).
+- [ ] **Desplegar el contrato:** `bash scripts/deploy-fuji.sh`. Despliega, verifica en el
+      explorador y te imprime la dirección.
+- [ ] **Publicar esa dirección:** `vercel env add NEXT_PUBLIC_PASS_ADDRESS production` y después
+      `vercel deploy --prod --yes`. Anotala también en el README.
+- [ ] **Poner el enlace real de la comunidad de Team1** en `src/features/pass/links.ts`, que hoy
+      tiene un provisorio.
+
 ## Antes del día
 
 - [ ] **Crear la wallet de respaldo.** Una segunda cuenta en Core, distinta de la que vas a usar
@@ -155,8 +167,8 @@ aplicación, era de la red.
 
 | | |
 |---|---|
-| Aplicación | _pendiente: URL de Vercel_ |
-| Contrato en Fuji | _pendiente: dirección_ |
+| Aplicación | https://team1-workshop-pass.vercel.app |
+| Contrato en Fuji | _pendiente: se completa al desplegar_ |
 | Wallet en vivo | la tuya, la que abrís en Core el día del workshop |
 | Wallet de respaldo | _pendiente: la creás vos en Core_ |
 | Explorador | subnets.avax.network/c-chain-testnet |

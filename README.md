@@ -8,9 +8,10 @@ usable desde el teléfono.
 
 | | |
 |---|---|
-| Aplicación | _pendiente: URL de Vercel_ |
-| Contrato en Fuji | _pendiente: dirección_ |
-| Wallet de respaldo (plan B) | _pendiente: dirección_ |
+| Aplicación | https://team1-workshop-pass.vercel.app |
+| Repositorio | https://github.com/ferrosasfp/team1-workshop-pass |
+| Contrato en Fuji | _pendiente: se completa al desplegar_ |
+| Wallet de respaldo (plan B) | _pendiente: la crea Fernando en Core_ |
 
 ---
 
