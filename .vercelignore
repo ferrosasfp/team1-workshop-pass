@@ -1,1 +1,3 @@
-contracts/
+# Los contratos no hacen falta para construir la aplicacion. La barra inicial
+# es importante: sin ella tambien excluiria src/features/contracts/.
+/contracts
