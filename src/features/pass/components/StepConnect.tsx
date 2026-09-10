@@ -26,22 +26,25 @@ export function StepConnect() {
           identidad, y con eso alcanza para entrar.
         </p>
 
-        <button type="button" onClick={() => setDialogOpen(true)} className="btn-primary text-lg">
-          Conectar wallet
-        </button>
+        {/* En proyector el boton y la ayuda comparten fila: el alto escasea. */}
+        <div className="flex flex-col items-start gap-6 corto:flex-row corto:items-center corto:gap-4">
+          <button type="button" onClick={() => setDialogOpen(true)} className="btn-primary text-lg">
+            Conectar wallet
+          </button>
 
-        <p className="text-sm text-muted">
-          ¿No tenés ninguna?{' '}
-          <a
-            href="https://core.app/download"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-avax underline underline-offset-4"
-          >
-            Core es la wallet de Avalanche
-          </a>
-          .
-        </p>
+          <p className="text-sm text-muted">
+            ¿No tenés ninguna?{' '}
+            <a
+              href="https://core.app/download"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-avax underline underline-offset-4"
+            >
+              Core es la wallet de Avalanche
+            </a>
+            .
+          </p>
+        </div>
 
         {dialogOpen && <ConnectDialog onClose={() => setDialogOpen(false)} />}
       </div>

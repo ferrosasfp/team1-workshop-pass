@@ -64,7 +64,7 @@ export function DemoFlow() {
   return (
     <main
       className="mx-auto flex min-h-dvh w-full max-w-6xl flex-col gap-3 p-4
-                 sm:h-dvh sm:overflow-hidden sm:p-5"
+                 corto:gap-2 corto:p-4 sm:h-dvh sm:overflow-hidden sm:p-5"
     >
       <header className="flex shrink-0 flex-wrap items-center justify-between gap-2">
         <h1 className="text-lg font-bold tracking-heading">
@@ -74,7 +74,7 @@ export function DemoFlow() {
       </header>
 
       {/* En pantalla ancha: pasos a la izquierda, contenido a la derecha. */}
-      <div className="flex flex-col gap-3 sm:min-h-0 sm:flex-1 sm:flex-row sm:gap-4">
+      <div className="flex flex-col gap-3 corto:gap-2 sm:min-h-0 sm:flex-1 sm:flex-row sm:gap-4">
         <Stepper active={step} unlocked={unlocked} onSelect={onSelect} />
 
         <section
