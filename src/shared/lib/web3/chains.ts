@@ -9,7 +9,7 @@ import type { Chain } from 'viem'
 // permite a wagmi inferir los `chainId` validos en cada llamada.
 export const supportedChains = [avalancheFuji, avalanche] as const
 
-const configuredChainId = Number(process.env.NEXT_PUBLIC_CHAIN_ID ?? '43113')
+const configuredChainId = Number((process.env.NEXT_PUBLIC_CHAIN_ID ?? '43113').trim())
 
 export const defaultChain = configuredChainId === avalanche.id ? avalanche : avalancheFuji
 

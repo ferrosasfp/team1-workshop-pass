@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { pasoActivo, pasoSugerido, pasosHabilitados } from '../lib/flow'
 
 const SIN_WALLET = { conectado: false, redCorrecta: false, tienePass: false }
@@ -65,5 +65,31 @@ describe('pasoActivo', () => {
 
   it('al desconectar vuelve al paso 1 aunque hubiera navegación manual', () => {
     expect(pasoActivo(1, { paso: 4, desde: 3 })).toBe(1)
+  })
+})
+
+describe('configuración del contrato', () => {
+  it('acepta la dirección aunque venga con espacios o saltos de línea', async () => {
+    // Cargar la variable con `echo` en Vercel le deja un salto de línea pegado.
+    vi.resetModules()
+    vi.stubEnv('NEXT_PUBLIC_PASS_ADDRESS', '0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2\n')
+
+    const { isPassAddressConfigured, passAddress } = await import('../contract')
+
+    expect(isPassAddressConfigured).toBe(true)
+    expect(passAddress).toBe('0x2C9a24f4e55A46195fc1838BCAf00506402a0Fa2')
+
+    vi.unstubAllEnvs()
+  })
+
+  it('avisa cuando la dirección falta o es inválida, en vez de romperse', async () => {
+    vi.resetModules()
+    vi.stubEnv('NEXT_PUBLIC_PASS_ADDRESS', 'todavia-no')
+
+    const { isPassAddressConfigured } = await import('../contract')
+
+    expect(isPassAddressConfigured).toBe(false)
+
+    vi.unstubAllEnvs()
   })
 })

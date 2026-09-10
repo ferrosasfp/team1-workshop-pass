@@ -8,7 +8,9 @@ import { defaultChain } from '@/shared/lib/web3/chains'
  */
 export const passAbi = team1WorkshopPassAbi
 
-const configured = process.env.NEXT_PUBLIC_PASS_ADDRESS ?? ''
+// Se recorta: cargar la variable con `echo` deja un salto de linea pegado,
+// y sin esto la aplicacion se cae al piso creyendo que no esta configurada.
+const configured = (process.env.NEXT_PUBLIC_PASS_ADDRESS ?? '').trim()
 
 /** false cuando falta configurar NEXT_PUBLIC_PASS_ADDRESS con una dirección válida. */
 export const isPassAddressConfigured = /^0x[0-9a-fA-F]{40}$/.test(configured)
